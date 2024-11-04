@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <ClerkProvider>
       <div>
-        <h1>Hello</h1>
         <UserButton afterSwitchSessionUrl="/" />
       </div>
     </ClerkProvider>
