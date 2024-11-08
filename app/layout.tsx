@@ -20,8 +20,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "DevFlow",
-  description:
-    "A community-driven platform for asking and answering programming question.",
+  description: `A community-driven 
+    platform for asking and answering programming question.`,
   icons: {
     icon: "/assets/images/site-logo.svg",
   },
@@ -33,19 +33,19 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
-        <ClerkProvider
-          appearance={{
-            elements: {
-              formButtonPrimary: "primary-gradient",
-              footerActionLink: "primary-text-gradient hover:text-primary-500",
-            },
-          }}
-        >
+    <ClerkProvider
+      appearance={{
+        elements: {
+          formButtonPrimary: "primary-gradient",
+          footerActionLink: "primary-text-gradient hover:text-primary-500",
+        },
+      }}
+    >
+      <html lang="en">
+        <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
           <ThemeProvider>{children}</ThemeProvider>
-        </ClerkProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -7,7 +7,7 @@
     "prettier"
   ],
   "rules": {
-    "max-len": [2, 250],
+    "max-len": [2, 80],
     "no-multiple-empty-lines": [
       "error",
       {
