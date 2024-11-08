@@ -20,17 +20,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const handleThemeChange = () => {
     if (mode === "dark") {
-      setMode("light");
+      // setMode("light");
       document.documentElement.classList.add("light");
     } else {
-      setMode("dark");
+      // setMode("dark");
       document.documentElement.classList.add("dark");
     }
   };
 
   useEffect(() => {
     handleThemeChange();
-  }, [mode]);
+  }, [mode, handleThemeChange]);
 
   return (
     <ThemeContext.Provider value={{ mode, setMode }}>
